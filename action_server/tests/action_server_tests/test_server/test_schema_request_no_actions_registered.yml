@@ -1,0 +1,7 @@
+info:
+  title: Robocorp Actions Server
+  version: 0.1.0
+openapi: 3.1.0
+paths: {}
+servers:
+- url: http://localhost:0

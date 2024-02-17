@@ -1,0 +1,32 @@
+tasks:
+  case_task_and_element:
+    shell: python -m robocorp.tasks run tasks.py -t case_task_and_element --console-colors=plain
+    
+  case_failure:
+    shell: python -m robocorp.tasks run tasks.py -t case_failure --console-colors=plain
+    
+  case_generators:
+    shell: python -m robocorp.tasks run tasks.py -t case_generators --console-colors=plain
+    
+  case_log:
+    shell: python -m robocorp.tasks run tasks.py -t case_log --console-colors=plain
+    
+  case_filter:
+    shell: python -m robocorp.tasks run tasks.py -t case_filter --console-colors=plain
+    
+  case_big_structures:
+    shell: python -m robocorp.tasks run tasks.py -t case_big_structures --console-colors=plain
+
+environmentConfigs:
+  - conda.yaml
+artifactsDir: output
+ignoreFiles:
+  - .gitignore
+PATH:
+  - .
+PYTHONPATH:
+  - .
+  # We want the 'robocorp.tasks' and 'robocorp.log' to be there too.
+  - ../../../../tasks/src
+  - ../../../../log/src
+  - ../../../../browser/src

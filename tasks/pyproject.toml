@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "robocorp-tasks"
+version = "2.9.1"
+description = "The automation framework for Python"
+authors = [
+	"Fabio Z. <fabio@robocorp.com>",
+]
+readme = "README.md"
+repository = "https://github.com/robocorp/robocorp/"
+license = "Apache-2.0"
+packages = [{include = "robocorp/tasks", from = "src"}]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+robocorp-log = ">=2.4,<3"
+psutil = "^5.0"
+docstring_parser_fork = "^0.0.5"
+
+[tool.poetry.group.dev.dependencies]
+robocorp-devutils = {path = "../devutils/", develop = true}
+types-psutil = "^5.9"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+ignore = ["E501"]
+
+[tool.mypy]
+mypy_path = "src:tests"
+
+[[tool.mypy.overrides]]
+module = "setuptools.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pytest_timeout.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pytest_timeout.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "module_that_does_not_exist"
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

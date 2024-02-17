@@ -1,0 +1,13 @@
+- docs: ''
+  file: actions.py
+  input_schema:
+    additionalProperties: false
+    properties: {}
+    type: object
+  line: 6
+  name: my_action
+  options:
+    is_consequential: null
+  output_schema:
+    description: ''
+    type: string

@@ -1,0 +1,51 @@
+name: ⭐️ Feature Request
+description: Submit a proposal/request for a new feature
+labels: [ feature ]
+body:
+  - type: dropdown
+    id: components
+    attributes:
+      label: Target components
+      description: Select the affected packages in the reported feature
+      multiple: true
+      options:
+        - Other
+        - action_server
+        - actions
+        - browser
+        - desktop
+        - devutils
+        - docs
+        - excel
+        - integration_tests
+        - log
+        - log_pytest
+        - meta
+        - storage
+        - tasks
+        - templates
+        - vault
+        - windows
+        - workitems
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Why & who
+      description: Let us know why this is important and to whom is addressed.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Feature or enhancement
+      description: >-
+        Describe the problem you're trying to solve or the missing capability.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Solution & alternative
+      description: >-
+        If you have a solution in mind, please detail it. Are you using or have you
+        considered any alternative one or workaround?

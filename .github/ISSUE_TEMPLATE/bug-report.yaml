@@ -1,0 +1,65 @@
+name: 🐛 Bug report
+description: Submit a bug report to help us make Robocorp better
+labels: [ bug ]
+body:
+  - type: dropdown
+    id: components
+    attributes:
+      label: Target components
+      description: Select the affected packages in the reported bug
+      multiple: true
+      options:
+        - Other
+        - action_server
+        - actions
+        - browser
+        - desktop
+        - devutils
+        - docs
+        - excel
+        - integration_tests
+        - log
+        - log_pytest
+        - meta
+        - storage
+        - tasks
+        - templates
+        - vault
+        - windows
+        - workitems
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is wrong
+      description: >-
+        Give details on what you are doing, what you expect to happen, and what
+        is currently happening.
+      placeholder: >-
+        * I'm trying to use the `robocorp` library to do X
+        * I expected to get Y
+        * Instead it does Z
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: System info
+      description: Sharing your system information will help us with debugging.
+      placeholder: >-
+        * Library version
+        * Python version
+        * Operating System version
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Example script
+      description: >-
+        If possible, please provide an automation example which replicates the problem.
+        Including any input/output data sample to test the example with.
+        (⚠️do not share sensitive information as this is a public source)
+      placeholder: >-
+        * Here's the isolated script block which highlights the bug
+        * Which is operating on this file
+        * And produces this behaviour/output instead of the expected one

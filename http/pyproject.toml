@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "robocorp-http"
+version = "0.4.2"
+description = "Robocorp HTTP library (deprecated)"
+authors = [
+	"Fabio Z. <fabio@robocorp.com>",
+	"Cosmin P. <cosmin@robocorp.com>",
+]
+readme = "README.md"
+repository = "https://github.com/robocorp/robocorp/"
+license = "Apache-2.0"
+packages = [{include = "robocorp", from="src"}]
+
+[tool.black]
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+robocorp-devutils = {path = "../devutils/", develop = true}
+types-requests = "^2.31.0.1"
+responses = "^0.23.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
