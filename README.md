@@ -267,15 +267,3 @@ Build more `@actions` and be awesome! We'd love to hear and see what have you bu
 
 <div id="contribute"></div>
 
-## Contributing and issues
-
-> ⭐️ First, please star the repo - your support is highly appreciated!
-
-- 🚩 Issues – our [GitHub Issues](https://github.com/robocorp/robocorp/issues) is kept up to date with bugs, improvements, and feature requests
-- 🙋 Help - you are welcome to [join our Community Slack](https://robocorp-developers.slack.com/) if you experience any difficulty getting setup
-- 🌟 Contribution and recognition – Start [here](https://github.com/robocorp/robocorp/blob/master/CONTRIBUTING.md), [PR's](https://github.com/robocorp/robocorp/pulls) are welcome!
-- 🔐 Refer to our [Security policy](https://robocorp.com/.well-known/security.txt) for details
-
-### Contributors
-
-![Contributors](https://contrib.nn.ci/api?repo=robocorp/robocorp)
